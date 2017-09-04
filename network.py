@@ -41,7 +41,7 @@ class Network(object):
     def feedforward(self, a):
         """Return the output of the network if ``a`` is input."""
         for b, w in zip(self.biases, self.weights):
-            a = sigmoid(np.dot(w, a)+b)
+            a = sigmoid(np.dot(w, a)+b)#按照矩阵计算法则计算
         return a
 
     def SGD(self, training_data, epochs, mini_batch_size, eta,
